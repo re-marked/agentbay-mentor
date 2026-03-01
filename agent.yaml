@@ -1,0 +1,13 @@
+name: Mentor
+model:
+  primary: google/gemini-2.5-flash
+tools:
+  profile: general
+  allow: [read, web_search]
+  deny: [exec, write, browser, gateway, cron]
+  elevated: false
+memory:
+  mode: persistent
+  compaction: safeguard
+sandbox: "off"
+providers: [google]
